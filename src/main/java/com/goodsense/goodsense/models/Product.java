@@ -3,35 +3,19 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-public class Product {
-
-
-    public String name;
-
-    public String description;
+public class Product extends AbstractEntity{
 
     public List<Ingredient> inredients = new ArrayList();
 
     public Double price;
 
+    public String description;
 
-    public Product(String name, String description, ArrayList ingredients, Double price){
-        this.name = name;
-        this.description = description;
+    public Product(ArrayList ingredients, Double price, String description){
+        super();
         this.inredients = ingredients;
         this.price = price;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getDescription() {
-        return description;
+        this.description = description;
     }
 
     public void setDescription(String description) {
@@ -54,16 +38,7 @@ public class Product {
         this.price = price;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Product)) return false;
-        Product product = (Product) o;
-        return Objects.equals(getName(), product.getName()) && Objects.equals(getDescription(), product.getDescription()) && Objects.equals(getInredients(), product.getInredients()) && Objects.equals(getPrice(), product.getPrice());
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(getName(), getDescription(), getInredients(), getPrice());
+    public String getDescription() {
+        return description;
     }
 }

@@ -1,4 +1,7 @@
 package com.goodsense.goodsense.models;
 
-public class ShoppingCart {
+import java.util.ArrayList;
+
+public class ShoppingCart extends AbstractEntity {
+
 }

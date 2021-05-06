@@ -1,4 +1,9 @@
 package com.goodsense.goodsense.models.data;
 
-public interface ShoppingCartRepository {
+import com.goodsense.goodsense.models.ShoppingCart;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface ShoppingCartRepository extends CrudRepository<ShoppingCart, Integer>{
 }
